@@ -1,0 +1,34 @@
+@model App_Bancaria.ViewModel.CuentaViewModel
+
+@{
+    ViewData["Title"] = "Listado de Cuentas Bancarias";
+}
+
+<h1 style="text-align: center;">Listado de Cuentas Bancarias</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nombre Titular</th>
+            <th>Tipo de Cuenta</th>
+            <th>Saldo Inicial</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cuenta in Model.ListCuenta)
+        {
+            <tr>
+                <td>@cuenta.NombreTitular</td>
+                <td>@cuenta.TipoCuenta</td>
+                <td>@cuenta.SaldoInicial</td>
+                <td>@cuenta.Email</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<div class="text-center">
+    <a class="btn btn-primary" asp-controller="Cuenta" asp-action="Index">Volver al Registro</a>
+</div>
