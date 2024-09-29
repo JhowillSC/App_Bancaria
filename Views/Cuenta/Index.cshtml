@@ -1,0 +1,28 @@
+@model App_Bancaria.ViewModel.CuentaViewModel
+@{
+    ViewData["Title"] = "Registro";
+}
+
+<h1 style="text-align: center;">Registrar Cuenta Bancaria</h1>
+<form asp-controller="Cuenta" asp-action="Registrar" method="post">
+    <div class="form-group">
+        <label asp-for="FormCuenta.NombreTitular" class="control-label"></label>
+        <input asp-for="FormCuenta.NombreTitular" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="FormCuenta.TipoCuenta" class="control-label"></label>
+        <input asp-for="FormCuenta.TipoCuenta" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="FormCuenta.SaldoInicial" class="control-label"></label>
+        <input asp-for="FormCuenta.SaldoInicial" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="FormCuenta.Email" class="control-label"></label>
+        <input asp-for="FormCuenta.Email" class="form-control" />
+    </div>
+    <div class="form-group text-center">
+        <button type="submit" class="btn btn-primary">Registrar</button>
+    </div>
+</form>
+<h3 class="title-jhowill">@ViewData["Message"]</h3>
