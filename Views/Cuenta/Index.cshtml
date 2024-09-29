@@ -1,11 +1,9 @@
 @model App_Bancaria.ViewModel.CuentaViewModel
-
 @{
     ViewData["Title"] = "Registro";
 }
 
 <h1 style="text-align: center;">Registrar Cuenta Bancaria</h1>
-
 <form asp-controller="Cuenta" asp-action="Registrar" method="post">
     <div class="form-group">
         <label asp-for="FormCuenta.NombreTitular" class="control-label"></label>
@@ -27,10 +25,4 @@
         <button type="submit" class="btn btn-primary">Registrar</button>
     </div>
 </form>
-
 <h3 class="title-jhowill">@ViewData["Message"]</h3>
-
-
-<div class="text-center">
-    <a class="btn btn-secondary" asp-controller="Cuenta" asp-action="Listar">Ver Listado de Cuentas</a>
-</div>
